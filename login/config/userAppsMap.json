@@ -1,0 +1,5 @@
+{
+  "Terry": ["shared", "atom"],
+  "test": ["shared", "trace"],
+  "admin": ["shared", "trace", "atom"]
+}

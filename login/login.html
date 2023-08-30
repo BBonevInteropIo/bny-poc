@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BNY Mellon Login</title>
+
+  <link rel="stylesheet" href="./t42bootstrap.bundle.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="text/javascript" src="./desktop-5.23.0.js" ></script>
+  <script type="text/javascript" src="./main.js" defer></script>
+
+</head>
+<body>
+  <div id="root">
+    <div class="container-fluid h-100 d-flex flex-column">
+            <div class="align-items-end flex-grow-1 row justify-content-center">
+                <div class="col-12 col-lg-5 col-md-6 col-sm-8 col-xl-4 text-center px-5">
+                    <!-- <img src="/logo.svg" alt="Logo" class="logo-img mb-5" /> -->
+                </div>
+            </div>
+            <div class="row justify-content-center flex-grow-1">
+                <div class="col-12 col-lg-5 col-md-6 col-sm-8 col-xl-4">
+                    <div class="form-group">
+                        <label htmlFor="username">Commit ID</label>
+                        <input id="username" type="input" required class="form-control" placeholder="Enter Commit ID" />
+                    </div>
+
+                    <div class="form-group position-relative">
+                        <label htmlFor="password">Password</label>
+                        <input type="password"  required class="form-control" id="password" placeholder="Enter Password" autoComplete="current-password"/>
+                        <div class="invalid-feedback d-block"></div>
+                    </div>
+                    <div class="btn-group d-flex pt-3">
+                        <button id = "login" disabled class="btn btn-primary mr-3">Login</button>
+                        <button class="btn btn-secondary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+[
+   {
+      "name": "atom",
+      "title": "Atom",
+      "type": "window",
+      "details": {
+          "url": "https://docs.glue42.com/getting-started/what-is-glue42/general-overview/index.html",
+          "mode": "tab",
+          "width": 800,
+          "height": 600
+      }
+    },
+    {
+        "name": "trace",
+        "title": "Trace",
+        "type": "window",
+        "details": {
+            "url": "https://docs.glue42.com/getting-started/what-is-glue42/general-overview/index.html",
+            "mode": "tab",
+            "width": 800,
+            "height": 600
+        }
+    },
+    {
+        "name": "shared",
+        "title": "Shared",
+        "type": "window",
+        "details": {
+            "url": "https://docs.glue42.com/getting-started/what-is-glue42/general-overview/index.html",
+            "mode": "tab",
+            "width": 800,
+            "height": 600
+        }
+    }
+]
