@@ -1,12 +1,13 @@
 
 (async  function start() {
-
-  let registeredApps = {}
-
+  
   const initializeGlue42 = async () => {
     window.glue = await Glue({appManager: "full"});
   };
 
+  function sleep (ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms || 500))
+  }
 
   async function fetchUserAppsMap () {
     return fetch('./config/userAppsMap.json')
@@ -43,42 +44,27 @@
     return result;
   }
 
-  async function shouldUpdateAppDefinitions(apps) {
-    let result = false;
-
-    if (apps.length !==  Object.keys(registeredApps).length) {
-      result = true;
-    } else {
-      for(let i = 0; i < apps.length; i++) {
-        const app = apps[i]
-        if (!registeredApps[app.name]) {
-          result = true;
-          break;
-        }
-      }
-    }
-   
-    return result
-  }
-
   async function update() {
     const user = glue42gd?.sid
 
     const apps = await getAppsForUser(user);
 
-    if (shouldUpdateAppDefinitions(apps)) {
-        await glue.appManager.inMemory.import(apps, "replace");
-        registeredApps = apps.reduce((obj,curr)=> (obj[curr.name]=true,obj),{});
-    }
+    await glue.appManager.inMemory.import(apps, "replace");
   }
 
   async function startPolling(interval) {
-    setInterval(() => {
-      update()
-    }, interval)
+      while(true) {
+        try {
+          await update()
+        } catch (error) {
+          console.error(error)
+        }
+        
+        await sleep(5000)
+      }
   }
 
 
   await initializeGlue42();
-  startPolling(5000)
+  await startPolling()
 })()
