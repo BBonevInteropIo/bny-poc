@@ -1,0 +1,29 @@
+{
+    "region": "BT",
+    "env": "UAT",
+    "gw": {
+        "configuration": {
+            "port": 8386,
+            "ip": "127.0.0.1"
+        }
+    },
+         "systemAppStores": [
+        {
+            "type": "path",
+            "details": {
+                "path": "./config/systemApps-override"
+            }
+        }
+    ],
+      "ssoAuth": {
+        "authController": "sso",
+        "options": {
+            "url": "http://localhost:22082/login/login.html",
+            "window": {
+                "width": 500,
+                "height": 650,
+                "mode": "flat"
+            }
+        }
+    },
+}

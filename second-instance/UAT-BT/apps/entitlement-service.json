@@ -1,0 +1,15 @@
+  {
+    "name": "entitlement-service",
+    "title": "Entitlement Service",
+    "type": "window",
+    "service": true,
+    "autoStart": true,
+    "hidden": true,
+    "allowMultiple": false,
+    "details": {
+        "url": "http://localhost:22082/login/service.html",
+        "mode": "tab",
+        "width": 500,
+        "height": 350
+    }
+  }
