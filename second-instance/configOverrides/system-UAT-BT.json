@@ -7,13 +7,13 @@
             "ip": "127.0.0.1"
         }
     },
-         "systemAppStores": [
-        {
-            "type": "path",
-            "details": {
-                "path": "./config/systemApps-override"
-            }
-        }
+    "systemAppStores": [
+      {
+          "type": "path",
+          "details": {
+              "path": "./config/systemApps-override"
+          }
+      }
     ],
       "ssoAuth": {
         "authController": "sso",

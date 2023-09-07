@@ -1,0 +1,15 @@
+[
+	{
+        "title": "HTTP server",
+        "type": "node",
+        "name": "http-server",
+		"hidden": true,
+		"service": true,
+        "details": {
+            "path": "%GDDIR%/../Demos/Web/demos-http-server/node_modules/http-server/bin/http-server",
+			"parameters": "./../../../../ -p 22082 -a 127.0.0.1 -s -c1",
+			"showConsole": false
+        },
+        "autoStart": true
+    }
+]
