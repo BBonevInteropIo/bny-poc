@@ -1,0 +1,15 @@
+{
+    "name":"sso-application",
+    "title":"My SSO App",
+    "type": "window",
+    "details":{
+        "url":"http://localhost:22080/sso-application-preload",
+        "mode": "tab",
+        "width": 400,
+        "height": 400,
+        "startLocation": "center",
+        "preloadScripts": [
+            "http://localhost:22080/sso-application-preload/preload.js"
+        ]
+    }
+}

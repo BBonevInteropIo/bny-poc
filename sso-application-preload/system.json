@@ -1,0 +1,13 @@
+{
+    "ssoAuth": {
+        "authController": "sso"
+    },
+    "systemAppStores": [
+        {
+            "type": "path",
+            "details": {
+                "path": "./config/systemApps"
+            }
+        }
+    ]
+}
